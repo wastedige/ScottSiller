@@ -738,21 +738,21 @@ ul.social-icons li {
   font-size: 30px;
   color: #fff;
 }
-.service-page .service-parts .block {
+.tournament-page .service-parts .block {
   margin-bottom: 40px;
   text-align: center;
 }
-.service-page .service-parts .block i {
+.tournament-page .service-parts .block i {
   font-size: 35px;
   color: #02bdd5;
 }
-.service-page .service-parts .block p {
+.tournament-page .service-parts .block p {
   padding: 0 8px;
   font-size: 14px;
   color: #777;
   line-height: 1.7;
 }
-.works.service-page figure .buttons {
+.works.tournament-page figure .buttons {
   position: absolute;
   top: 45%;
   left: 13%;
