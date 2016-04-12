@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html ng-app class="no-js">
+    <head>
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <title>Timer Agency Template</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="">
+        <!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Template CSS Files
+        ================================================== -->
+        <!-- Twitter Bootstrs CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Ionicons Fonts Css -->
+        <link rel="stylesheet" href="css/ionicons.min.css">
+        <!-- animate css -->
+        <link rel="stylesheet" href="css/animate.css">
+        <!-- Hero area slider css-->
+        <link rel="stylesheet" href="css/slider.css">
+        <!-- owl craousel css -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.css">
+        <link rel="stylesheet" href="css/jquery.fancybox.css">
+        <!-- template main css file -->
+        <link rel="stylesheet" href="css/main.css">
+        <!-- responsive css -->
+        <link rel="stylesheet" href="css/responsive.css">
+
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+        // Step 1. Generated a feed from Wordpress using feedburner: http://feeds.feedburner.com/Syslogicnews?format=xml
+        // Step 2. Used Google Feed API to inject feeds into a website -- https://developers.google.com/feed/v1/devguide
+        google.load("feeds", "1");
+
+        function initialize() {
+          var feed = new google.feeds.Feed("http://feeds.feedburner.com/Scottsillerblog?format=xml");
+          feed.setNumEntries(20);
+          feed.load(function(result) {
+            if (!result.error) {
+              var container = document.getElementById("feed");
+              var html = '';
+              for (var i = 0; i < result.feed.entries.length; i++) {
+                var entry = result.feed.entries[i];
+                html += '<h3>' +  entry.title + '</h3><p>' + entry.content + '</p>'
+                + '<small>Published at ' + entry.publishedDate + '</small><br/><br/><br/><hr>' ;
+
+              }
+              container.innerHTML = html;
+            }
+          });
+        }
+        google.setOnLoadCallback(initialize);
+
+        </script>
+
+    </head>
+    <body>
+        <!--
+        ==================================================
+        Header Section Start
+        ================================================== -->
+        <div ng-include src="'header.html'"></div>
+
+        <!--
+        ==================================================
+            Global Page Section Start
+        ================================================== -->
+        <section class="global-page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="block">
+                            <h2>Scott's Blog</h2>
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="index.html">
+                                        <i class="ion-ios-home"></i>
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="active">Blog</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--/#Page header-->
+
+
+        <!--
+        ==================================================
+            Service Page Section  Start
+        ================================================== -->
+        <section id="blog-full-width">
+            <div class="container" >
+                <div class="row">
+
+                  <div class="text-left" id="feed"></div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--
+        ==================================================
+            Works Section Start
+        ================================================== -->
+        <!--
+        ==================================================
+            Clients Section Start
+        ================================================== -->
+
+
+
+
+        <!--
+        ==================================================
+            Footer Section Start
+        ================================================== -->
+        <div ng-include src="'footer.html'"></div>
+
+        <!-- Template Javascript Files
+        ================================================== -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+        <!-- modernizr js -->
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <!-- owl carouserl js -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- bootstrap js -->
+
+        <script src="js/bootstrap.min.js"></script>
+        <!-- wow js -->
+        <script src="js/wow.min.js"></script>
+        <!-- slider js -->
+        <script src="js/slider.js"></script>
+        <script src="js/jquery.fancybox.js"></script>
+        <!-- template main js -->
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
